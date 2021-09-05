@@ -1,0 +1,12 @@
+
+<div class="container py5" style="margin-top: 20px;">
+    <app-add-new-todo (sendTodo)="AddMyTodo($event)" (msg_color)="back_color=$event" ></app-add-new-todo>
+<br>
+<div *ngFor="let todo of myTodos">
+    <div class="code" [ngStyle]="{background:back_color}" style="border-radius:10px;">
+    <ul>
+        <li><app-display-todo [SndTodo]="todo" (delTodo)="RemoveTodo($event)" (StrikeTodo)="StkTodo($event)"></app-display-todo></li>
+    </ul>
+</div>
+<h1>{{NoTodo}}</h1>
+</div>

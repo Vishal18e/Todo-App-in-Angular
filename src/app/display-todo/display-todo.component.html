@@ -1,0 +1,8 @@
+<!-- Display Todo -->
+
+<h4 [ngStyle]="{'text-decoration':value}">{{RecTodo.Title}}</h4>
+<p [ngStyle]="{'text-decoration':value}">{{RecTodo.Desc}}</p>
+<div class="sel">
+<div class="btn btn-primary" style="margin:10px;" (click)="Strike()" >Done</div>
+<div class="btn btn-success" style="margin:10px;" (click)="DeleteTodo()">Delete</div>
+</div>
